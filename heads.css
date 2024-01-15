@@ -1,0 +1,149 @@
+/* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling for the header section */
+
+/* Styling for the header section */
+.heads {
+    height: 90px; /* Adjust the height as needed */
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000; /* Ensure it's above other elements */
+    background-color: #333; /* Background color */
+    margin-bottom: 20px; /* Add margin at the bottom of the header */
+    background-image: url('campus.jpg'); /* Add your background image URL */
+    background-position: center;
+    background-size: cover;
+}
+
+
+/* Styling for the navigation bar */
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Styling for the logo */
+nav img {
+    width: 50px;
+}
+
+/* Styling for the navigation links */
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul {
+    list-style: none;
+}
+
+.nav-links ul li {
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+    /* Additional styles for the new section */
+    .image-text-section {
+        padding: 50px 0; /* Adjust the padding as needed */
+        background-color: #f4f4f4; /* Add a background color for the section */
+    }
+
+    .section-content {
+        display: flex;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+
+    .image-container {
+        flex: 1;
+        padding-right: 20px; /* Adjust spacing between image and text */
+    }
+
+    .image-container img {
+        width: 100%; /* Make the image fill its container */
+        height: auto;
+        border-radius: 8px; /* Add rounded corners if desired */
+    }
+
+    .text-container {
+        flex: 1;
+    }
+
+    .text-container h2 {
+        font-size: 24px; /* Adjust the font size as needed */
+        margin-bottom: 15px;
+    }
+
+    .text-container p {
+        font-size: 16px; /* Adjust the font size as needed */
+        line-height: 1.6;
+    }
+
+    @media screen and (max-width: 768px) {
+        /* Adjust styles for smaller screens */
+        .section-content {
+            flex-direction: column; /* Stack image and text on small screens */
+        }
+
+        .image-container,
+        .text-container {
+            padding-right: 0; /* Remove padding on small screens */
+        }
+    }
+/* Styling for the footer section */
+.footer {
+    background-color: rgba(51, 51, 51, 0.8);
+    padding: 1em;
+    width: 100%;
+}
+
+/* Styling for the content within the footer */
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Styling for the WhatsApp floating icon */
+.whatsapp-floating-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.whatsapp-floating-icon img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.whatsapp-floating-icon img:hover {
+    transform: scale(1.1);
+}
+
+/* Media query for responsive design */
+@media screen and (max-width: 768px) {
+    /* Adjust styles for smaller screens */
+    .nav-links {
+        text-align: center; /* Center align the navigation links on small screens */
+    }
+
+    .nav-links ul li {
+        display: block; /* Stack navigation links on small screens */
+        text-align: center; /* Center align the text within each link */
+        margin-bottom: 5px; /* Add some spacing between links */
+    }
+
+    /* Adjust other styles as needed for smaller screens */
+}
