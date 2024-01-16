@@ -53,6 +53,7 @@ nav img {
 #header-section h1 {
     margin: 10px;
     color: #fff;
+    animation: floatIn 1s ease-out;
 }
 
 main {
@@ -222,5 +223,16 @@ main {
     .whatsapp-floating-icon img {
         width: 30px;
         height: 30px;
+    }
+}
+
+@keyframes floatIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
     }
 }
