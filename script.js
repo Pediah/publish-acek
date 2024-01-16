@@ -1,47 +1,26 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const headerSection = document.getElementById("header-section");
-    const stickyHeader = document.getElementById("stickyHeader");
-    const headsSection = document.querySelector(".heads");
+    const headsSection = document.querySelector('.heads');
+    let lastScrollTop = 0;
 
-    let prevScrollPos = window.pageYOffset;
+    window.addEventListener('scroll', function () {
+        const currentScrollTop = window.scrollY;
 
-    if (headerSection && stickyHeader && headsSection) {
-        window.onscroll = function () {
-            const currentScrollPos = window.pageYOffset;
+        // Toggle visibility using display property
+        if (currentScrollTop > lastScrollTop) {
+            // Scrolling down, hide the section
+            headsSection.style.display = 'none';
+        } else {
+            // Scrolling up, show the section
+            headsSection.style.display = 'block';
+        }
 
-            if (prevScrollPos < currentScrollPos) {
-                // Scrolling down
-                headsSection.style.display = "none";
-            } else {
-                // Scrolling up
-                headsSection.style.display = "flex";
-            }
+        // Handle position of .heads based on scroll direction
+        if (currentScrollTop > lastScrollTop) {
+            headsSection.style.top = "-80px"; // Adjust this value as needed
+        } else {
+            headsSection.style.top = "0";
+        }
 
-            if (currentScrollPos === 0) {
-                // Reached the top of the page
-                headsSection.style.display = "flex";
-            }
-
-            if (currentScrollPos > 200) {
-                // Add or remove the 'visible' class based on scroll position
-                stickyHeader.classList.add("visible");
-            } else {
-                stickyHeader.classList.remove("visible");
-            }
-
-            prevScrollPos = currentScrollPos;
-        };
-
-        var lastScrollTop = 0;
-        navbar = document.getElementById("heads");
-        window.addEventListener("scroll", function() {
-            var scrolltop = window.pageYOffset || document.documentElement.scrollTop;
-            if (scrolltop > lastScrollTop) {
-                headsSection.style.top = "-80px";
-            } else {
-                headsSection.style.top = "0";
-            }
-            lastScrollTop = scrolltop;
-        });
-    }
+        lastScrollTop = currentScrollTop;
+    });
 });
