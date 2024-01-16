@@ -61,7 +61,7 @@ main {
 }
 
 #header-section {
-    background: url("IMG_7934.jpeg") center/cover;
+    background: linear-gradient(to bottom, rgba(13, 34, 124, 0.7), rgba(123, 22, 11, 0.7)), url("IMG_7934.jpeg") center/cover;
     transition: background-color 0.5s ease-in-out;
     height: 75vh;
     max-width: 100%;
@@ -132,7 +132,7 @@ main {
     background-color: #f0f0f0;
     padding: 20px;
     margin: 20px auto;
-    max-width: 100%;
+    max-width: 80%;
     border-radius: 8px;
 }
 
