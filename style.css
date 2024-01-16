@@ -6,10 +6,15 @@
 
 .heads {
     position: fixed;
-    width: 100%; /* Adjusted to 100% */
+    width: 100%;
     height: 512px;
     left: 0px;
     top: 0px;
+    transition: top 0.3s, display 0.3s ease;
+}
+
+.heads.hidden {
+    display: none;
 }
 
 nav {
@@ -20,7 +25,7 @@ nav {
 }
 
 nav img {
-    max-width: 50px; /* Ensure the logo is responsive */
+    max-width: 50px;
 }
 
 .nav-links {
@@ -59,7 +64,7 @@ main {
     background: url("IMG_7934.jpeg") center/cover;
     transition: background-color 0.5s ease-in-out;
     height: 75vh;
-    max-width: 100%; /* Adjusted to 100% */
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -73,16 +78,11 @@ main {
 }
 
 #logo img {
-    max-width: 100%; /* Ensure the logo is responsive */
+    max-width: 100%;
 }
 
 .header-content {
     text-align: center;
-}
-
-#header-section h1 {
-    margin: 10px;
-    color: #fff;
 }
 
 .header,
@@ -96,18 +96,6 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-}
-
-.section {
-    flex: 1 1 30%;
-    margin: 10px;
-}
-
-.section-content {
-    padding: 20px;
-    max-width: 100%; /* Adjusted to 100% */
-    width: 100%;
-    box-sizing: border-box;
 }
 
 .section {
@@ -144,7 +132,7 @@ main {
     background-color: #f0f0f0;
     padding: 20px;
     margin: 20px auto;
-    max-width: 1000px; /* Adjusted to 100% */
+    max-width: 100%;
     border-radius: 8px;
 }
 
@@ -183,11 +171,9 @@ main {
 .footer {
     background-color: rgba(51, 51, 51, 0.8);
     padding: 1em;
-    width: 100%;
 }
 
 .footer-content {
-    max-width: 100%; /* Adjusted to 100% */
     margin: 0 auto;
 }
 
