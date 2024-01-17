@@ -173,12 +173,56 @@ main {
 }
 
 .footer {
+    text-align: center;
+    color: #fff;
     background-color: rgba(51, 51, 51, 0.8);
     padding: 1em;
+    width: 100%;
 }
 
 .footer-content {
-    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-section {
+    flex: 1 1 calc(25% - 2em);
+    padding: 0 1em;
+    margin-bottom: 1px;
+    box-sizing: border-box;
+}
+
+.footer-section h4 {
+    color: #fff;
+}
+
+.footer-section p {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.copyright p {
+    margin: 0;
+}
+
+.copyright a {
+    color: #fff;
+    text-decoration: underline;
 }
 
 .whatsapp-floating-icon {

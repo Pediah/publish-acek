@@ -98,7 +98,7 @@ nav img {
 .footer-section {
     flex: 1 1 calc(25% - 2em);
     padding: 0 1em;
-    margin-bottom: 20px;
+    margin-bottom: 1px;
     box-sizing: border-box;
 }
 
