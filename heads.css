@@ -1,27 +1,22 @@
-/* Reset default margin and padding for all elements */
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-/* Styling for the header section */
-
-/* Styling for the header section */
 .heads {
-    height: 90px; /* Adjust the height as needed */
-    width: 100%;
     position: fixed;
+    width: 100%;
+    height: 512px;
+    left: 0;
     top: 0;
-    z-index: 1000; /* Ensure it's above other elements */
-    background-color: #333; /* Background color */
-    margin-bottom: 20px; /* Add margin at the bottom of the header */
-    background-image: url('campus.jpg'); /* Add your background image URL */
-    background-position: center;
-    background-size: cover;
+    transition: top 0.3s, display 0.3s ease;
 }
 
+.heads.hidden {
+    display: none;
+}
 
-/* Styling for the navigation bar */
 nav {
     display: flex;
     padding: 2% 6%;
@@ -29,12 +24,11 @@ nav {
     align-items: center;
 }
 
-/* Styling for the logo */
 nav img {
-    width: 50px;
+    max-width: 220px;
+    max-height: auto;
 }
 
-/* Styling for the navigation links */
 .nav-links {
     flex: 1;
     text-align: right;
@@ -42,77 +36,27 @@ nav img {
 
 .nav-links ul {
     list-style: none;
+    margin: 0;
 }
 
 .nav-links ul li {
     display: inline-block;
+    margin-left: 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
     padding: 8px 12px;
-    position: relative;
-}
-    /* Additional styles for the new section */
-    .image-text-section {
-        padding: 50px 0; /* Adjust the padding as needed */
-        background-color: #f4f4f4; /* Add a background color for the section */
-    }
-
-    .section-content {
-        display: flex;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding-top: 50px;
-        padding-bottom: 20px;
-    }
-
-    .image-container {
-        flex: 1;
-        padding-right: 20px; /* Adjust spacing between image and text */
-    }
-
-    .image-container img {
-        width: 100%; /* Make the image fill its container */
-        height: auto;
-        border-radius: 8px; /* Add rounded corners if desired */
-    }
-
-    .text-container {
-        flex: 1;
-    }
-
-    .text-container h2 {
-        font-size: 24px; /* Adjust the font size as needed */
-        margin-bottom: 15px;
-    }
-
-    .text-container p {
-        font-size: 16px; /* Adjust the font size as needed */
-        line-height: 1.6;
-    }
-
-    @media screen and (max-width: 768px) {
-        /* Adjust styles for smaller screens */
-        .section-content {
-            flex-direction: column; /* Stack image and text on small screens */
-        }
-
-        .image-container,
-        .text-container {
-            padding-right: 0; /* Remove padding on small screens */
-        }
-    }
-/* Styling for the footer section */
-.footer {
-    background-color: rgba(51, 51, 51, 0.8);
-    padding: 1em;
-    width: 100%;
+    display: inline-block;
 }
 
-/* Styling for the content within the footer */
-.footer-content {
-    max-width: 800px;
-    margin: 0 auto;
+.body-content {
+    margin-bottom: 60px;
 }
+/* ... (Previous CSS styles remain unchanged) ... */
 
-/* Styling for the WhatsApp floating icon */
+/* WhatsApp Floating Icon Styles */
 .whatsapp-floating-icon {
     position: fixed;
     bottom: 20px;
@@ -128,22 +72,64 @@ nav img {
     transition: transform 0.3s ease-in-out;
 }
 
-.whatsapp-floating-icon img:hover {
+.whatsapp-floating-icon:hover img {
     transform: scale(1.1);
 }
 
-/* Media query for responsive design */
-@media screen and (max-width: 768px) {
-    /* Adjust styles for smaller screens */
-    .nav-links {
-        text-align: center; /* Center align the navigation links on small screens */
-    }
+/* ... (Remaining CSS styles remain unchanged) ... */
 
-    .nav-links ul li {
-        display: block; /* Stack navigation links on small screens */
-        text-align: center; /* Center align the text within each link */
-        margin-bottom: 5px; /* Add some spacing between links */
-    }
 
-    /* Adjust other styles as needed for smaller screens */
+.footer {
+    text-align: center;
+    color: #fff;
+    background-color: rgba(51, 51, 51, 0.8);
+    padding: 1em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-section {
+    flex: 1 1 calc(25% - 2em);
+    padding: 0 1em;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.footer-section h4 {
+    color: #fff;
+}
+
+.footer-section p {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.copyright p {
+    margin: 0;
+}
+
+.copyright a {
+    color: #fff;
+    text-decoration: underline;
 }
