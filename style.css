@@ -303,12 +303,12 @@ main {
 }
 
 .section:hover {
-    transform: scale(1.1);
+    transform: scale(1.03);
 }
 
 
 .section:hover {
-    transform: scale(1.1);
+    transform: scale(1.);
 }
 
 
