@@ -165,6 +165,34 @@ main {
 .image-text-section p {
     color: #666;
 }
+/* Add this CSS to style the new text-image section */
+.text-image-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #e6e6e6; /* Adjust the background color as needed */
+    padding: 40px;
+}
+
+.text-image-section .subsection {
+    flex: 1;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.text-image-section img {
+    max-width: 100%;
+    height: auto;
+}
+
+.text-image-section h2 {
+    color: #333;
+}
+
+.text-image-section p {
+    color: #666;
+}
+
 
 
 .footer {
