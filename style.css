@@ -103,6 +103,17 @@ nav img {
     .mobile-nav-toggle {
         display: none; /* Hide mobile navigation toggle button on larger screens */
     }
+
+    nav .fa {
+        display: block;
+        color: #fff;
+        margin: 10px;
+        cursor: pointer;
+    }
+
+    .nav-links ul {
+        padding: 30px;
+    }
 }
 
 /* Header section styles */
@@ -181,7 +192,7 @@ main {
 
 #video-section {
     position: relative;
-    background-color:white;
+    background-color: white;
     color: #fff;
     text-align: left; /* Align text to the left */
     padding: 60px 0;
@@ -253,44 +264,6 @@ main {
     max-width: 600px;
     width: 100%;
     box-sizing: border-box;
-}
-
-.about-section {
-    background: url("IMG_6585.jpeg") center/cover;
-    height: 500px;
-    width: auto;
-}
-/* Add this to your existing CSS */
-
-.section {
-    flex: 1 1 30%;
-    margin: 10px;
-    transition: transform 0.3s ease-in-out; /* Added transition property for pop effect */
-}
-/* Add this to your existing CSS */
-/* Add this to your existing CSS */
-
-.read-more-button {
-    display: none; /* Initially hide the read more button */
-    text-decoration: none;
-    color: #fff;
-    background-color: #4caf50;
-    padding: 5px 10px;
-    border-radius: 4px;
-    margin-top: 10px;
-    transition: opacity 0.3s ease-in-out; /* Added transition property for fade effect */
-}
-
-.section:hover .read-more-button {
-    display: inline-block; /* Show the read more button on section hover */
-}
-
-
-.section-content {
-    padding: 20px;
-    max-width: 800px;
-    width: 100%;
-    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: center; /* Center content vertically */
@@ -298,28 +271,15 @@ main {
     height: 100%; /* Make the content take full height of the section */
 }
 
-
-.section-content:hover .read-more-button {
-    opacity: 1; /* Fade in the read more button on content hover */
+.section:hover .read-more-button {
+    display: inline-block; /* Show the read more button on section hover */
 }
 
-.section {
-    flex: 1 1 30%;
-    margin: 10px;
-    transition: transform 0.3s ease-in-out; /* Added transition property for pop effect */
-    border-radius: 8px; /* Added border-radius for smooth corners */
-    overflow: hidden; /* Ensure the border-radius is applied to the background */
+.about-section {
+    background: url("IMG_6585.jpeg") center/cover;
+    height: 500px;
+    width: auto;
 }
-
-.section:hover {
-    transform: scale(1.03);
-}
-
-
-.section:hover {
-    transform: scale(1.);
-}
-
 
 .academics-section {
     background: url("IMG_6133.jpeg") center/cover;
@@ -369,7 +329,6 @@ main {
 .contact-form input[type="submit"]:hover {
     background-color: #45a049;
 }
-
 
 .footer {
     text-align: center;
