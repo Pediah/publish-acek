@@ -1,25 +1,24 @@
-/* Reset styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* General styles */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-}
-
-/* Navigation styles */
 .heads {
     position: absolute;
     width: 100%;
     height: 100px;
-    left: 0px;
-    top: 0px;
+    top: 0;
+    left: 0;
     transition: top 0.3s, display 0.3s ease;
 }
+
+@media screen and (max-width: 768px) {
+    .heads {
+        height: 60px; /* Adjust height for smaller screens */
+    }
+}
+
 
 nav {
     display: flex;
@@ -37,20 +36,6 @@ nav img {
 .nav-links {
     flex: 1;
     text-align: right;
-}
-
-.desktop-nav {
-    display: none; /* Initially hide desktop navigation */
-}
-
-.nav-links ul {
-    list-style: none;
-    margin: 0;
-}
-
-.nav-links ul li {
-    display: inline-block;
-    margin-left: 10px;
 }
 
 .nav-links a {
@@ -83,51 +68,21 @@ nav img {
     width: 100%;
 }
 
-.mobile-nav-toggle {
-    display: block; /* Initially show mobile navigation toggle button */
-    background: none;
-    border: none;
-    cursor: pointer;
+.nav-links ul {
+    list-style: none;
+    margin: 0;
+}
+
+.nav-links ul li {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
     color: #fff;
-}
-
-.mobile-nav-toggle i {
-    font-size: 1.5em;
-}
-
-@media screen and (min-width: 768px) {
-    .desktop-nav {
-        display: block; /* Show desktop navigation on larger screens */
-    }
-
-    .mobile-nav-toggle {
-        display: none; /* Hide mobile navigation toggle button on larger screens */
-    }
-
-    nav .fa {
-        display: block;
-        color: #fff;
-        margin: 10px;
-        cursor: pointer;
-    }
-
-    .nav-links ul {
-        padding: 30px;
-    }
-}
-
-/* Header section styles */
-#header-section {
-    background: linear-gradient(to bottom, rgba(13, 34, 124, 0.7), rgba(123, 22, 11, 0.7)),
-        url("IMG_7934.jpeg") center/cover;
-    transition: background-color 0.5s ease-in-out;
-    height: 100vh;
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 0;
+    padding: 8px 12px;
+    display: inline-block;
 }
 
 #header-section h1 {
@@ -192,7 +147,7 @@ main {
 
 #video-section {
     position: relative;
-    background-color: white;
+    background-color:white;
     color: #fff;
     text-align: left; /* Align text to the left */
     padding: 60px 0;
@@ -264,15 +219,6 @@ main {
     max-width: 600px;
     width: 100%;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
-    height: 100%; /* Make the content take full height of the section */
-}
-
-.section:hover .read-more-button {
-    display: inline-block; /* Show the read more button on section hover */
 }
 
 .about-section {
@@ -280,6 +226,66 @@ main {
     height: 500px;
     width: auto;
 }
+/* Add this to your existing CSS */
+
+.section {
+    flex: 1 1 30%;
+    margin: 10px;
+    transition: transform 0.3s ease-in-out; /* Added transition property for pop effect */
+}
+/* Add this to your existing CSS */
+/* Add this to your existing CSS */
+
+.read-more-button {
+    display: none; /* Initially hide the read more button */
+    text-decoration: none;
+    color: #fff;
+    background-color: #4caf50;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-top: 10px;
+    transition: opacity 0.3s ease-in-out; /* Added transition property for fade effect */
+}
+
+.section:hover .read-more-button {
+    display: inline-block; /* Show the read more button on section hover */
+}
+
+
+.section-content {
+    padding: 20px;
+    max-width: 800px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    height: 100%; /* Make the content take full height of the section */
+}
+
+
+.section-content:hover .read-more-button {
+    opacity: 1; /* Fade in the read more button on content hover */
+}
+
+.section {
+    flex: 1 1 30%;
+    margin: 10px;
+    transition: transform 0.3s ease-in-out; /* Added transition property for pop effect */
+    border-radius: 8px; /* Added border-radius for smooth corners */
+    overflow: hidden; /* Ensure the border-radius is applied to the background */
+}
+
+.section:hover {
+    transform: scale(1.03);
+}
+
+
+.section:hover {
+    transform: scale(1.);
+}
+
 
 .academics-section {
     background: url("IMG_6133.jpeg") center/cover;
@@ -329,6 +335,7 @@ main {
 .contact-form input[type="submit"]:hover {
     background-color: #45a049;
 }
+
 
 .footer {
     text-align: center;
