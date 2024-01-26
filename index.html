@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Welcome to BBBB Academy - Providing high-quality education since 2000">
+    <meta name="description" content="Welcome to Acek Academy - Providing high-quality education since 2000">
     <meta name="keywords" content="school, education, academics, admissions, contact us">
-    <title>BBBB Academy</title>
+    <title>Acek Academy</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-        integrity="sha512-...your-sha-hash-here..." crossorigin="anonymous" />
-    <link rel="icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <script src="script.js" defer></script>
 </head>
-
 <body>
-    <section class="heads">
+    <header class="header">
         <nav>
-            <a href="index.html"><img src="ACEK.gif" alt="Logo"></a>
-            <div class="nav-links">
+            <a href="index.html"><img src="ACEK.gif" alt="Acek Academy"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fas fa-times" onclick="hideMenu()"></i>
                 <ul>
                     <li><a href="#">HOME</a></li>
                     <li><a href="#">ABOUT US</a></li>
@@ -27,24 +27,42 @@
                     <li><a href="#">GALLERY</a></li>
                 </ul>
             </div>
+            <i class="fas fa-bars" onclick="showMenu()"></i>
         </nav>
-    </section>
-    <section id="header-section" class="header">
-        <div class="header-content">
-            <h1>Your Header Text Goes Here</h1>
-            <a href="#" class="enroll-button">Enroll Now</a>
+        <div class="text-box">
+            <h1>Welcome to Acek Academy</h1>
+            <div class="scrolling-words">
+                <p class="word">INTEGRITY</p>
+                <p class="word">MORALS</p>
+                <p class="word">PASSION</p>
+                <p class="word">INNOVATION</p>
+            </div>
+            <a href="enroll.html" class="enrollbtn">Enroll Now</a>
+        </div>
+    </header>
+    <section class="mission">
+        <h1>OUR MISSION</h1>
+        <p>Service and Excellence</p>
+        <div class="row">
+            <div class="mission-col">
+                <h3>Integrity</h3>
+                <p>We value honest, dedication to work and we are committed to offer service that represents quality</p>
+            </div>
+            <div class="mission-col">
+                <h3>Morals</h3>
+                <p>We adhere to stringent quality control of standards on matters of morality</p>
+            </div>
+            <div class="mission-col">
+                <h3>Passion</h3>
+                <p>We have passion for people and our students</p>
+            </div>
+        </div>
+        <div class="mission-col">
+            <h3>Innovations</h3>
+            <p>Change is exciting and imperative for growth and development of our students. We keep ourselves at the helm of new and fresh ideas in modern education and Technology.<br>
+            We cherish our old school of business ethics and embrace our new school of innovation to supply premium brand education to our students </p>
         </div>
     </section>
-    <section id="video-section">
-        <div class="text-section">
-            <h2>Featured Video</h2>
-            <p>Watch our latest video to learn more about BBBB Academy.</p>
-        </div>
-        <div class="video-content">
-            <iframe width="500" height="315" src="https://www.youtube.com/embed/MOd4EXEiSOE?si=Fkb2WQjTBkr-qxol&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-    </section>
-
     <div class="container">
         <section id="about" class="section about-section">
             <div class="section-content">
@@ -70,78 +88,56 @@
             </div>
         </section>
     </div>
-
-    <div class="contact-form">
-        <h2>Contact Us</h2>
-        <form action="submit_contact_form.php" method="post">
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-
-            <input type="submit" value="Send Message">
-        </form>
-    </div>
-
     <a href="https://wa.me/+27679371350" class="whatsapp-floating-icon" target="_blank">
         <img src="icons8-whatsapp.gif" alt="WhatsApp Icon" width="38" height="38">
     </a>
 
-    <section class="footer">
+    <footer>
         <div class="footer-content">
             <div class="footer-section">
-                <h4>Address</h4>
-            
-                <address>
-                    <p>BBBB Academy</p>
-                    <p>123 Education Street</p>
-                    <p>Cityville, Country</p>
-                    <div class="google-maps-link">
-                        <p>Find us on Google Maps:
-                            <a href="https://maps.google.com?q=123+Education+Street, Cityville, Country" target="_blank">123 Education Street, Cityville, Country</a>
-                        </p>
-                        <!-- With this img tag for the static map image -->
-                        <img src="https://maps.googleapis.com/maps/api/staticmap?center=123+Education+Street, Cityville, Country&zoom=15&size=600x300&maptype=roadmap&markers=color:red%7Clabel:A%7C123+Education+Street, Cityville, Country&key=YOUR_GOOGLE_MAPS_API_KEY" alt="Google Maps">
-                    </div>
-                </address>
+                <img src="ACEK.gif" class="logo">
+                <h3>Contact Information</h3>
+                <p> info@example.com</p>
+                <p>Phone: +123 456 789</p>
             </div>
             <div class="footer-section">
-                <h4>Quick Links</h4>
+                <h3>Quick Links</h3>
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Courses</a></li>
                     <li><a href="#">Admissions</a></li>
                     <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h4>Contact Information</h4>
-                <p>Email: info@example.com</p>
-                <p>Phone: +123 456 789</p>
-                <h4>Follow Us</h4>
-                <div class="icons">
-                    <i class="fab fa-facebook"></i>
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-linkedin"></i>
-                    <i class="fab fa-youtube"></i>
-                </div>
+                <h3>Address</h3>
+                <p><a href="https://maps.app.goo.gl/N7jHxMnHznUJ6x12A" target="_blank">18 William Lynn <br> Street<br> White river<br>South Africa</a></p>
             </div>
             <div class="footer-section">
-                <h4>Contact Information</h4>
-                <p>Email: info@example.com</p>
-                <p>Phone: +123 456 789</p>
+                <h3>Contact Us</h3>
+                <form action="contact_form" method="post">
+                    <label for="name">Your Name:<input type="text" id="name" name="name" required></label>
+                    <label for="email">Your Email:<input type="email" id="email" name="email" required></label>
+                    <label for="message">Message:<textarea id="message" name="message" required></textarea></label>
+                    <input type="submit" value="Send Message">
+                </form>
             </div>
+        </div>
+        <hr>
+        <div class="social-icons">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-linkedin"></i>
+            <i class="fab fa-youtube"></i>
         </div>
         <div class="copyright">
             <p>&copy;Acek Academy 2000 | All rights reserved. | <a href="https://ceaser.co.za" target="_blank"> Developed
                     by Ceaser Tech</a></p>
         </div>
-    </section>
+    </footer>
 </body>
 
 </html>
